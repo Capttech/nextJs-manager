@@ -1,0 +1,51 @@
+.pageTitle {
+    font-size: 1.4em;
+}
+
+.pageForm {
+    display: block;
+    position: fixed;
+    top: 3.2em;
+    left: 10%;
+    width: 50%;
+    height: 20%;
+}
+
+.pageForm div {
+    display: block;
+    width: 10em;
+    height: fit-content;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.pageForm div label {
+    height: 5em;
+    padding-left: 0.4em;
+}
+
+.pageForm div input {
+    width: 8em;
+    background: none;
+    border: none;
+    margin-left: 0.4em;
+    padding-left: 0.4em;
+}
+
+.submitButton {
+    position: relative;
+    bottom: -0.2em;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    border-radius: 0.6em;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.submitButton:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.submitButton:active {
+    background-color: rgb(0, 0, 0, 0.8);
+}
