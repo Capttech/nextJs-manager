@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import exp from "constants";
 import './page.css'
 
-async function createVehicle(data: FormData) {
+async function createHouse(data: FormData) {
     "use server"
 
     const address = data.get('address')?.valueOf()
@@ -41,7 +41,7 @@ async function createVehicle(data: FormData) {
 export default async function addPage() {
     return <>
         <h1 className="pageTitle">Create New House</h1>
-        <form className="pageForm" action={createVehicle}>
+        <form className="pageForm" action={createHouse}>
             <div>
                 <label className="pageFormLabel" htmlFor="newPlate">Address</label>
                 <input name="address" id="newPlate" type="text" placeholder="Patrol dr" />
