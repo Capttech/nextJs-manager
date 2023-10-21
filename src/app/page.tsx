@@ -8,35 +8,6 @@ import { redirect } from "next/navigation";
 
 
 /**
- * Get all vehicles
- * @returns 
- */
-async function getUserVehicles() {
-    let allVehicles = await prisma.userVehicles.findMany()
-    return allVehicles
-}
-
-
-/**
- * Get all houses
- * @returns 
- */
-async function getUserHouses() {
-    let allHouses = await prisma.userHouses.findMany()
-    return allHouses
-}
-
-/**
- * Get all other items
- * @returns 
- */
-async function getUserOther() {
-    let allOtherStuff = await prisma.userOther.findMany()
-    return allOtherStuff
-}
-
-
-/**
  * Delete user vehicle
  * @param userId 
  * @param plate 
@@ -134,9 +105,9 @@ async function updateUserOther(userId: string, name: string, location: string, d
  * @returns 
  */
 export default async function HomePage() {
-    let allVehicles = await getUserVehicles()
-    let allHouses = await getUserHouses()
-    let allOtherStuff = await getUserOther()
+    let allVehicles = await prisma.userVehicles.findMany()
+    let allHouses = await prisma.userHouses.findMany()
+    let allOtherStuff = await prisma.userOther.findMany()
 
     return <>
         <header>
